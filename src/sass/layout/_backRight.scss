@@ -1,0 +1,19 @@
+.backRight {
+
+    @include respond(tab-port) {
+        display: none;
+    }
+    // background: blue;
+    // opacity:30%;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+    display: grid;
+    grid-template-rows: 1fr 3fr;
+}
+
+
+
+.postStampContainer {
+    display: flex;
+    justify-content: flex-end;
+}
+

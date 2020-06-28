@@ -1,0 +1,27 @@
+.content {
+    // background-color: rgb(238, 136, 136);
+    padding: 10rem 5rem;
+    color: black;
+    text-align: center;
+
+    & h1 {
+        margin-bottom: 2rem;
+    }
+
+    & p {
+        margin-bottom: 1rem;
+    }
+
+    &__visuals {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 1rem;
+        
+    }
+}
+
+
+.imagebox {
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+    border-radius: 20%;
+}

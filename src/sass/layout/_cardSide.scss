@@ -1,0 +1,88 @@
+.card {
+
+    // FUNCTIONALITY
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    position: relative;
+    height: calc(100vh - 4rem);
+
+    @include respond(tab-port) {
+        height: 70vh;
+    }
+    
+    &__side {
+
+        @include respond(tab-port) {
+            position: static;
+        }
+
+        transition: all .8s ease;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        backface-visibility: hidden;
+        border-radius: 3px;
+        overflow: hidden;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+        height: 100%;
+
+        &--front {
+            background-image: linear-gradient(
+            to right bottom,
+            rgba($color-primary-light, 0.8),
+            rgba($color-primary-dark, 0.8)),
+            url(../images/hero.jpg);
+            background-size: cover;
+            z-index: 0;
+            // background: rgb(238, 136, 136);
+        }
+
+        &--back {
+
+            @include respond(tab-port) {
+                display: block;
+                transform: none;
+            }
+
+            transform: rotateY(180deg);
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            grid-gap: 1rem;
+            box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+
+            // background-image: url(../images/hero.jpg);
+            // background-size: cover;
+        }
+
+        &--back::after {
+            content: "";
+            background: url(../images/hero.jpg);
+            background-size: cover;
+            opacity: 10%;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            position: absolute;
+            z-index: -1;   
+          }
+
+    }
+  
+
+    &:hover &__side--front {
+        @include respond(tab-port) {
+            transform: none;
+        }
+        transform: rotateY(-180deg);
+    }
+
+    &:hover &__side--back {
+        @include respond(tab-port) {
+            transform: none;
+        }
+        transform: rotateY(0);
+    }
+
+}
