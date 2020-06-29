@@ -15,6 +15,22 @@ ORDER: Base + typography > general layout + grid > page layout > components
 
 1em = 16px
 */
+/*
+phone       => altijd port
+phone land  => port
+ipad        => altijd port
+ipad pro    => port
+
+ipad  lands => lands
+ipad landsc => lands
+big pc      => lands
+
+
+lands => lands
+port => port
+<900 => port
+
+*/
 .u-center-text {
   text-align: center !important; }
 
@@ -61,8 +77,14 @@ ORDER: Base + typography > general layout + grid > page layout > components
   padding: 0;
   box-sizing: inherit; }
 
-html {
+html html {
   font-size: 62.5%; }
+  @media only screen and (max-width: 75em) and (orientation: portrait) {
+    html html {
+      font-size: 50%; } }
+  @media only screen and (min-width: 112.5em) {
+    html html {
+      font-size: 75%; } }
 
 body {
   box-sizing: border-box;
@@ -72,7 +94,7 @@ body {
   line-height: 1.7;
   color: white;
   padding: 2rem; }
-  @media only screen and (max-width: 56.25em) {
+  @media only screen and (max-width: 75em) and (orientation: portrait) {
     body {
       padding: 0; } }
 
@@ -81,7 +103,7 @@ body {
   -moz-perspective: 150rem;
   position: relative;
   height: calc(100vh - 4rem); }
-  @media only screen and (max-width: 56.25em) {
+  @media only screen and (max-width: 75em) and (orientation: portrait) {
     .card {
       height: 70vh; } }
   .card__side {
@@ -95,7 +117,7 @@ body {
     overflow: hidden;
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
     height: 100%; }
-    @media only screen and (max-width: 56.25em) {
+    @media only screen and (max-width: 75em) and (orientation: portrait) {
       .card__side {
         position: static; } }
     .card__side--front {
@@ -108,7 +130,7 @@ body {
       grid-template-columns: 2fr 1fr;
       grid-gap: 1rem;
       box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
-      @media only screen and (max-width: 56.25em) {
+      @media only screen and (max-width: 75em) and (orientation: portrait) {
         .card__side--back {
           display: block;
           transform: none; } }
@@ -125,12 +147,12 @@ body {
       z-index: -1; }
   .card:hover .card__side--front {
     transform: rotateY(-180deg); }
-    @media only screen and (max-width: 56.25em) {
+    @media only screen and (max-width: 75em) and (orientation: portrait) {
       .card:hover .card__side--front {
         transform: none; } }
   .card:hover .card__side--back {
     transform: rotateY(0); }
-    @media only screen and (max-width: 56.25em) {
+    @media only screen and (max-width: 75em) and (orientation: portrait) {
       .card:hover .card__side--back {
         transform: none; } }
 
@@ -142,8 +164,9 @@ body {
 .backRight {
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
   display: grid;
-  grid-template-rows: 1fr 3fr; }
-  @media only screen and (max-width: 56.25em) {
+  grid-template-rows: 1fr 0.5fr 3fr;
+  color: black; }
+  @media only screen and (max-width: 75em) and (orientation: portrait) {
     .backRight {
       display: none; } }
 
@@ -158,7 +181,7 @@ body {
 
 .navigation {
   display: none; }
-  @media only screen and (max-width: 56.25em) {
+  @media only screen and (max-width: 75em) and (orientation: portrait) {
     .navigation {
       display: block; }
       .navigation__checkbox {
@@ -250,28 +273,32 @@ body {
   .navigation__flex {
     display: flex;
     justify-content: center;
-    align-items: flex-end; }
+    align-items: flex-end;
+    grid-row: 3 / span 3; }
   .navigation__list {
     list-style: none;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     flex-direction: column;
-    color: black; }
+    color: black;
+    overflow: hidden; }
   .navigation__item {
-    font-size: 2rem;
+    font-size: 1.5rem;
     flex-direction: row;
     color: black;
     border-bottom: solid #abb7b7 1px;
-    padding: 0 4rem; }
+    padding: 0 4rem;
+    margin-bottom: 5px; }
     .navigation__item__span {
-      padding: 2rem 2rem; }
+      padding: 0 2rem; }
     .navigation__item__button {
       background-color: white;
-      width: 5rem;
-      height: 5rem;
+      width: 4rem;
+      height: 4rem;
       border-radius: 50%;
-      margin-right: 5rem; }
+      margin-right: 2rem;
+      margin-bottom: 5px; }
     .navigation__item:hover, .navigation__item:active {
       transform: translateX(1rem);
       text-transform: uppercase;

@@ -6,6 +6,7 @@ const BackRight = (props) => {
     return (
         <div className="backRight u-padding-3">
             <PostStamp />
+            <div>&nbsp;</div>
             <NavigationList />
         </div>
     );
