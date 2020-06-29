@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../images/hero.jpg';
+import logo from '../images/hero-small.jpg';
 
 
 const PostStamp = (props) => {

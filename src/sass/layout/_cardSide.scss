@@ -33,10 +33,11 @@
 
         &--front {
             background-image: linear-gradient(
-            to right bottom,
-            rgba($color-primary-light, 0.8),
-            rgba($color-primary-dark, 0.8)),
-            url(../images/hero.jpg);
+                to right bottom,
+                rgba($color-primary-light, 0.8),
+                rgba($color-primary-dark, 0.8)),
+                image-set( "../images/hero-small.jpg" 1x,
+                "../images/test.jpg" 2x);
             background-size: cover;
             z-index: 0;
             height: 100%;
@@ -75,7 +76,12 @@
 
         &--back::after {
             content: "";
-            background: url(../images/hero.jpg);
+            background-image: linear-gradient(
+                to right bottom,
+                rgba($color-primary-light, 0.8),
+                rgba($color-primary-dark, 0.8)),
+                image-set( "../images/hero-small.jpg" 1x,
+                "../images/test.jpg" 2x);
             background-size: cover;
             opacity: 10%;
             top: 0;
