@@ -4,7 +4,7 @@ import PostStamp from './PostStamp';
 
 const BackRight = (props) => {
     return (
-        <div className="backRight u-padding-3">
+        <div className="backRight u-padding-1">
             <PostStamp />
             <div>&nbsp;</div>
             <NavigationList />
