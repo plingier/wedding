@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { Component } from 'react';
+import Countdown from './Countdown';
 
 const PostCardFront = (props) => {
     return (
@@ -7,7 +8,7 @@ const PostCardFront = (props) => {
                 <i>icon</i>
                 <h1>Fran & Philippe</h1>
                 <h2>24/10/2020</h2>
-                <span>100d 20h 10min</span>                
+                <Countdown date={`2020-10-24T00:00:00`}/>               
             </div>
         </div>
     );
