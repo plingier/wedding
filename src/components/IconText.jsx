@@ -1,13 +1,13 @@
 import React from 'react';
 
-const IconText = ({ icon, text, href }) => {
+const IconText = ({ icon, text, gMaps }) => {
 
     const Icon = icon;
     
     return (
         <div className="iconText">
             <Icon size={20}/>
-            <a href={href} className="iconText__span" target="_blank">{text}</a>
+            <a href={gMaps} className="iconText__span" target="_blank" rel="noopener noreferrer">{text}</a>
         </div>
     );
 };

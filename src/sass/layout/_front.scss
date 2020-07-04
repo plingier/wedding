@@ -1,6 +1,18 @@
-.front__content {
+.front {
+
+  &__content {
     width: 80%;
     box-shadow: 0 3rem 6rem rgba($color-black, .1);
+  }
+
+  &__cta {
+    @include respond(tab-port) {
+      display: none;
+    }
+    padding: 0.5rem 2rem;
+    font-size: 1.5rem;
+    border-radius: 20px;
+  }
 }
 
 

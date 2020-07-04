@@ -1,23 +1,48 @@
-import React from 'react';
-import BackLeft from './BackLeft';
+import React, { Component } from 'react';
 import BackRight from './BackRight';
+import BackLeft from './BackLeft';
 import NavigationButton from './NavigationButton';
+import cardContent from '../cardContent';
 
-const PostCardBack = (props) => {
-    return (
-        <div className="card__side card__side--back">
-            <BackLeft 
-                title="Say Hallelujah & Yes"
-                date = "24 Oktober 2020"
-                time = "14:00"
-                address = "Sint-Pietersplein, 9000 Gent"
-                href = "https://www.google.com/maps/place/Sint-Pietersabdij/@51.0424485,3.72335,17z/data=!4m13!1m7!3m6!1s0x47c37150b0f4c601:0xc78bf8eb1d6e094a!2sSint-Pietersplein,+9000+Gent!3b1!8m2!3d51.0424485!4d3.725544!3m4!1s0x47c37150b165dd81:0x6a023c4d7bdac0a8!8m2!3d51.0421385!4d3.7267464"
-                text = "Wij verwerlkomen u graag in de Sint-Pieterskerk."
-            />  
-            <BackRight />
-            <NavigationButton />
-        </div> 
-    );
+class PostCardBack extends Component {
+    constructor() {
+        super();
+        this.state = {
+            content: []
+        }
+    }
+
+        
+    render() {
+        const { content } = this.state;
+
+        const listedContent = content.map(
+            (cont, i) => {
+            return (
+                <BackLeft
+                    key = {i}
+                    title={cont.title}
+                    date = {cont.date}
+                    time = {cont.time}
+                    address = {cont.address}
+                    text = {cont.text}
+                    gMaps = {cont.gMaps}
+                />                   
+            )}
+        );
+
+        return(
+            <div className="card__side card__side--back">
+                {listedContent}
+                <BackRight />
+                <NavigationButton />
+            </div>
+        )
+    };
+
+    componentDidMount() {
+        this.setState({content: cardContent});
+    }
 };
 
 export default PostCardBack;

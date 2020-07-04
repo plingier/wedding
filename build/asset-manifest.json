@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/wedding/static/css/main.9b46bcb2.chunk.css",
-    "main.js": "/wedding/static/js/main.35e69b70.chunk.js",
-    "main.js.map": "/wedding/static/js/main.35e69b70.chunk.js.map",
+    "main.css": "/wedding/static/css/main.0aa4f8f4.chunk.css",
+    "main.js": "/wedding/static/js/main.b708120e.chunk.js",
+    "main.js.map": "/wedding/static/js/main.b708120e.chunk.js.map",
     "runtime-main.js": "/wedding/static/js/runtime-main.0bb40c67.js",
     "runtime-main.js.map": "/wedding/static/js/runtime-main.0bb40c67.js.map",
-    "static/js/2.0421a032.chunk.js": "/wedding/static/js/2.0421a032.chunk.js",
-    "static/js/2.0421a032.chunk.js.map": "/wedding/static/js/2.0421a032.chunk.js.map",
+    "static/js/2.8f29d86a.chunk.js": "/wedding/static/js/2.8f29d86a.chunk.js",
+    "static/js/2.8f29d86a.chunk.js.map": "/wedding/static/js/2.8f29d86a.chunk.js.map",
     "index.html": "/wedding/index.html",
-    "precache-manifest.be9222b7ca8a610a1eab297403450228.js": "/wedding/precache-manifest.be9222b7ca8a610a1eab297403450228.js",
+    "precache-manifest.98e7bc469301fd5a0d4b0785c3f4c31c.js": "/wedding/precache-manifest.98e7bc469301fd5a0d4b0785c3f4c31c.js",
     "service-worker.js": "/wedding/service-worker.js",
-    "static/css/main.9b46bcb2.chunk.css.map": "/wedding/static/css/main.9b46bcb2.chunk.css.map",
-    "static/js/2.0421a032.chunk.js.LICENSE.txt": "/wedding/static/js/2.0421a032.chunk.js.LICENSE.txt",
+    "static/css/main.0aa4f8f4.chunk.css.map": "/wedding/static/css/main.0aa4f8f4.chunk.css.map",
+    "static/js/2.8f29d86a.chunk.js.LICENSE.txt": "/wedding/static/js/2.8f29d86a.chunk.js.LICENSE.txt",
     "static/media/style.css": "/wedding/static/media/test.171a43bf.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.0bb40c67.js",
-    "static/js/2.0421a032.chunk.js",
-    "static/css/main.9b46bcb2.chunk.css",
-    "static/js/main.35e69b70.chunk.js"
+    "static/js/2.8f29d86a.chunk.js",
+    "static/css/main.0aa4f8f4.chunk.css",
+    "static/js/main.b708120e.chunk.js"
   ]
 }

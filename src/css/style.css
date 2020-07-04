@@ -43,6 +43,9 @@ port => port
 .u-margin-bottom-big {
   margin-bottom: 8rem !important; }
 
+.u-margin-top-medium {
+  margin-top: 4rem !important; }
+
 .u-margin-top-big {
   margin-top: 8rem !important; }
 
@@ -216,6 +219,14 @@ body {
 .front__content {
   width: 80%;
   box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1); }
+
+.front__cta {
+  padding: 0.5rem 2rem;
+  font-size: 1.5rem;
+  border-radius: 20px; }
+  @media only screen and (max-width: 60em), only screen and (orientation: portrait) {
+    .front__cta {
+      display: none; } }
 
 .Countdown {
   margin: 10px auto;

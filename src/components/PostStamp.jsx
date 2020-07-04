@@ -10,6 +10,7 @@ const PostStamp = (props) => {
                 className="postStamp"
                 width="250rem"
                 height="140rem"
+                alt="Poststamp"
             >
             </img>
         </div>
