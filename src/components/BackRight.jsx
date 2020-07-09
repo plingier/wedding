@@ -2,12 +2,12 @@ import React from 'react';
 import NavigationList from './NavigationList';
 import PostStamp from './PostStamp';
 
-const BackRight = (props) => {
+const BackRight = ({ content, updateShow }) => {
     return (
         <div className="backRight u-padding-1">
             <PostStamp />
             <div>&nbsp;</div>
-            <NavigationList />
+            <NavigationList content={content} updateShow={updateShow}/>
         </div>
     );
 };
