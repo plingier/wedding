@@ -1,8 +1,14 @@
 import React, { Component } from 'react';
 import BackRight from './BackRight';
-import BackLeft from './BackLeft';
 import NavigationButton from './NavigationButton';
 import cardContent from '../cardContent';
+import Stad from './Stad';
+import Church from './Church';
+import Venue from './Venue';
+import Party from './Party';
+import RSVP from './RSVP';
+
+
 
 class PostCardBack extends Component {
     constructor() {
@@ -29,24 +35,25 @@ class PostCardBack extends Component {
     render() {
         const { content} = this.state;
 
+        const Components = {
+            stad: Stad,
+            church: Church,
+            venue: Venue,
+            party: Party,
+            rsvp: RSVP
+        };
+
         let listedContent={};
         // if small device, show all BackLeft
         if(matchMedia("(max-width: 60em),(orientation: portrait)").matches === true) {
-            listedContent = content.map(
-                (cont, i) => {
-                return (
-                    <BackLeft
-                        key = {i}
-                        title={cont.title}
-                        date = {cont.date}
-                        time = {cont.time}
-                        address = {cont.address}
-                        text = {cont.text}
-                        gMaps = {cont.gMaps}
-                    />                   
-                )}
-            );
+            listedContent = content.map((cont) => {
+                return React.createElement(Components[cont.leftContent], {
+                    key: cont.id,
+                    title: cont.title
+                });
+            });
         }
+
         // if large device, show only the one where state.content.show = true
         else {
             const listedContent2 = content.filter(
@@ -56,27 +63,25 @@ class PostCardBack extends Component {
             );
             
             listedContent = listedContent2.map(
-                (cont, i) => {
-                return (
-                    <BackLeft
-                        key = {i}
-                        title={cont.title}
-                        date = {cont.date}
-                        time = {cont.time}
-                        address = {cont.address}
-                        text = {cont.text}
-                        gMaps = {cont.gMaps}
-                    />                   
-                )}
-            );
-
-            
+                (cont) => {
+                    return React.createElement(Components[cont.leftContent], {
+                        key: cont.id,
+                    });
+                });
         }
 
-        
 
-        return(
-            <div className="card__side card__side--back">
+        listedContent = listedContent.map(cont => {
+            return(
+                <div className="backLeft2"> 
+                    {cont}    
+                    <div className="backLeft2__parallax"></div> 
+                </div>)
+        });
+
+
+        return(   
+            <div className="card__side card__side--back"> 
                 {listedContent}
                 <BackRight content={content} updateShow={this.updateShow}/>
                 <NavigationButton content={content} />
@@ -99,9 +104,10 @@ class PostCardBack extends Component {
 
         this.setState({content: cardContent2});
 
-        const mql = window.matchMedia("(max-width: 60em),(orientation: portrait)");
+        const mql = window.matchMedia("screen and (max-width: 60em),(orientation: portrait)");
 
-        mql.addEventListener("change", () => {
+        mql.addListener(() => {
+            console.log("event");
             this.forceUpdate();
         });
     }

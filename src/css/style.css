@@ -31,6 +31,7 @@ port => port
 <900 => port
 
 */
+@import url("https://fonts.googleapis.com/css?family=Alegreya");
 .u-center-text {
   text-align: center !important; }
 
@@ -94,7 +95,8 @@ html html {
 
 body {
   box-sizing: border-box;
-  font-family: "Lato", sans-serif;
+  font-family: 'Alegreya', serif;
+  font-display: auto;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.7;
@@ -133,7 +135,12 @@ body {
         box-shadow: 0;
         backface-visibility: visible; } }
     .card__side--front {
-      background-image: image-set("../images/hero-small.jpg" 1x, "../images/test.jpg" 2x);
+      background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), image-set("../images/hero-small.jpg" 1x, "../images/test.jpg" 2x);
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
       background-size: cover;
       z-index: 0;
       height: 100%;
@@ -156,6 +163,23 @@ body {
           display: block;
           transform: none;
           margin-top: -5vh; } }
+    .card__side--back::after {
+      content: "";
+      background-image: image-set("../images/hero-small.jpg" 1x, "../images/test.jpg" 2x);
+      background-size: cover;
+      opacity: 0.1;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      position: absolute;
+      z-index: -1; }
+      @media only screen and (max-width: 60em), only screen and (orientation: portrait) {
+        .card__side--back::after {
+          content: "";
+          background-image: none;
+          z-index: 0;
+          position: static; } }
   .card:hover .card__side--front {
     transform: rotateY(-180deg); }
     @media only screen and (max-width: 60em), only screen and (orientation: portrait) {
@@ -192,6 +216,82 @@ body {
   align-items: center; }
   .iconText__span {
     margin-left: 1rem; }
+
+.backLeft2 {
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-rendering: optimizeLegibility;
+  flex-direction: column; }
+  @media only screen and (max-width: 60em), only screen and (orientation: portrait) {
+    .backLeft2 {
+      box-shadow: none; }
+      .backLeft2:first-child {
+        margin-top: 5vh; } }
+  .backLeft2__parallax {
+    display: none; }
+    @media only screen and (max-width: 60em), only screen and (orientation: portrait) {
+      .backLeft2__parallax {
+        display: block;
+        /* The image used */
+        background-image: url("../images/test.jpg");
+        height: 30vh;
+        width: 100%;
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover; } }
+
+.stad__container {
+  text-align: center;
+  padding: 1.5rem; }
+
+.stad__title {
+  margin-bottom: 1rem; }
+
+.stad__subTitle {
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  font-weight: normal; }
+  .stad__subTitle strong {
+    text-transform: none; }
+
+.stad__link {
+  border: solid black 1px;
+  display: inline-block;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  text-decoration: none; }
+
+.venue {
+  text-align: center;
+  padding: 2rem; }
+  .venue__blocks {
+    display: inline-block;
+    margin-right: 4rem; }
+    .venue__blocks:last-child {
+      margin-right: 0rem; }
+    @media only screen and (max-width: 37.5em) {
+      .venue__blocks {
+        margin-right: 1.5rem; } }
+
+.playlist {
+  padding: 2rem 0rem;
+  width: 600px;
+  height: 480px; }
+  @media only screen and (max-width: 37.5em) {
+    .playlist {
+      width: 300px; } }
+
+.googleRSVP {
+  padding: 2rem 0rem;
+  width: 600px;
+  height: 480px; }
+  @media only screen and (max-width: 37.5em) {
+    .googleRSVP {
+      width: 300px; } }
 
 .backRight {
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
@@ -253,6 +353,8 @@ body {
   .navigation__checkbox:checked ~ .navigation__nav {
     opacity: 1;
     width: 100%; }
+  .navigation__checkbox:not(:checked) ~ .navigation__nav {
+    display: none; }
   .navigation__icon {
     position: relative;
     margin-top: 2rem; }
@@ -318,13 +420,26 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1rem 1rem;
+    padding: 0rem 0rem;
     flex-direction: column; }
   .navigation__list {
     list-style: none;
-    color: black; }
+    color: black;
+    overflow: scroll; }
   .navigation__hyper {
-    width: 100%; }
+    width: 100%;
+    color: inherit; }
+    .navigation__hyper:link {
+      text-decoration: none; }
+    .navigation__hyper:visited {
+      text-decoration: none; }
+    .navigation__hyper:hover {
+      text-decoration: underline; }
+    .navigation__hyper:active {
+      text-decoration: underline; }
+    @media only screen and (max-width: 60em), only screen and (orientation: portrait) {
+      .navigation__hyper {
+        padding: 0rem 1rem; } }
   .navigation__item {
     font-size: 1.5rem;
     display: flex;
@@ -334,20 +449,20 @@ body {
     color: black;
     border-bottom: solid #abb7b7 1px;
     height: 4.5rem; }
-    @media only screen and (max-width: 37.5em) {
+    @media only screen and (max-width: 60em), only screen and (orientation: portrait) {
       .navigation__item {
         font-size: 1rem; } }
     .navigation__item__icon {
       display: inline-block;
       background-color: white;
-      width: 4rem;
-      height: 4rem;
+      width: 3rem;
+      height: 3rem;
       border-radius: 50%;
-      padding: 1rem 1rem; }
+      padding: .55rem .55rem; }
       @media only screen and (max-width: 60em), only screen and (orientation: portrait) {
         .navigation__item__icon {
-          width: 3rem;
-          height: 3rem;
+          width: 2rem;
+          height: 2rem;
           border-radius: 50%;
           padding: 0.5rem 0.5rem; } }
     .navigation__item__span {
@@ -355,7 +470,7 @@ body {
       display: inline-block; }
     .navigation__item:hover, .navigation__item:active {
       transform: translateX(1rem);
-      background-image: linear-gradient(120deg, transparent 0%, transparent 30%, #fff 40%);
+      background-image: linear-gradient(120deg, transparent 0%, transparent 20%, #fff 40%);
       transition: all .8s; }
 
 .content {

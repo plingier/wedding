@@ -35,13 +35,20 @@
 
         &--front {
             background-image: 
-                // linear-gradient(
-                // to right bottom,
-                // rgba($color-primary-light, 0.8),
-                // rgba($color-primary-dark, 0.8)),
+                linear-gradient(
+                to right bottom,
+                rgba($color-primary-light, 0.8),
+                rgba($color-primary-dark, 0.8)),
                 image-set( "../images/hero-small.jpg" 1x,
                 "../images/test.jpg" 2x);
             background-size: cover;
+            background-position: center;
+
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
             z-index: 0;
             height: 100%;
             color:white;
@@ -70,33 +77,30 @@
             display: grid;
             grid-template-columns: 2fr 1fr;
             grid-gap: 0.5rem;
-
-            // background-image: url(../images/hero.jpg);
-            // background-size: cover;
         }
 
 
-        // &--back::after {
-        //     content: "";
-        //     background-image: image-set( 
-        //         "../images/hero-small.jpg" 1x,
-        //         "../images/test.jpg" 2x);
-        //     background-size: cover;
-        //     opacity: 0.1;
-        //     top: 0;
-        //     left: 0;
-        //     bottom: 0;
-        //     right: 0;
-        //     position: absolute;
-        //     z-index: -1;  
+        &--back::after {
+            content: "";
+            background-image: image-set( 
+                "../images/hero-small.jpg" 1x,
+                "../images/test.jpg" 2x);
+            background-size: cover;
+            opacity: 0.1;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            position: absolute;
+            z-index: -1;  
             
-        //     @include respond(tab-port) {
-        //         content: "";
-        //         background-image: none;
-        //         z-index: 0;
-        //         position: static;
-        //     }
-        // }
+            @include respond(tab-port) {
+                content: "";
+                background-image: none;
+                z-index: 0;
+                position: static;
+            }
+        }
 
     }
   

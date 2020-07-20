@@ -9,7 +9,7 @@ const PostCardFront = (props) => {
                 <i>icon</i>
                 <h1>Fran & Philippe</h1>
                 <h2>24/10/2020</h2>
-                <Countdown date={`2020-10-24T00:00:00`}/>
+                <Countdown date={`2020-10-23T09:45:00`}/>
                 <button className="front__cta">Meer info</button>          
             </div>
         </div>

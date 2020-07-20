@@ -39,7 +39,7 @@
         {
             display: block;
             padding: 0rem 0rem;
-
+            
 
             &__icon {
                 background-color: white;
@@ -64,6 +64,10 @@
         width: 100%;
     }
     
+
+    &__checkbox:not(:checked) ~ &__nav {
+        display: none;
+    }
     
     //ICON
     &__icon {
@@ -160,7 +164,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 1rem 1rem;
+        padding: 0rem 0rem;
         flex-direction: column;
     }
 
@@ -172,10 +176,32 @@
     &__list {
         list-style: none;
         color: black;
+        overflow: scroll;
     }
 
     &__hyper {
         width:100%;
+        color: inherit;
+        
+        &:link {
+            text-decoration: none;
+        }
+          
+        &:visited {
+            text-decoration: none;
+        }
+          
+        &:hover {
+            text-decoration: underline;
+        }
+          
+        &:active {
+            text-decoration: underline;
+        }
+
+        @include respond(tab-port) {
+            padding: 0rem 1rem;
+        }
     }
 
     &__item {
@@ -190,21 +216,21 @@
         height: 4.5rem;
 
 
-        @include respond(phone) {
+        @include respond(tab-port) {
             font-size: 1rem;
         }
 
         &__icon {
             display: inline-block;
             background-color: white;
-            width: 4rem;
-            height: 4rem;
+            width: 3rem;
+            height: 3rem;
             border-radius: 50%;
-            padding: 1rem 1rem;
+            padding: .55rem .55rem;
 
             @include respond(tab-port) {
-                width: 3rem;
-                height: 3rem;
+                width: 2rem;
+                height: 2rem;
                 border-radius: 50%;
                 padding: 0.5rem 0.5rem;
             }
@@ -220,7 +246,7 @@
         &:active {
             // background-position: 100%;
             transform: translateX(1rem);
-            background-image: linear-gradient(120deg, transparent 0%, transparent 30%, $color-white 40%);
+            background-image: linear-gradient(120deg, transparent 0%, transparent 20%, $color-white 40%);
             // background-size: 220%;
             transition: all .8s;
         }
