@@ -14,9 +14,9 @@ class NavigationButton extends Component {
 
 
     updateButtonChecked = () => {
-        this.state.buttonChecked === true ?
-        this.setState({buttonChecked : false}) :
-        this.setState({buttonChecked : true});
+            this.state.buttonChecked === true ?
+            this.setState({buttonChecked : false}) :
+            this.setState({buttonChecked : true})
     };
 
 

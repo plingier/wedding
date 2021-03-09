@@ -18,7 +18,7 @@ class PostCardBack extends Component {
         }
     }
 
-
+    // for large screens, if a navigation item is clicked, the rest disappears
     updateShow = (index) => {
         const content2 = this.state.content.map((cont, i) => {
             if(i===index) {
@@ -71,11 +71,11 @@ class PostCardBack extends Component {
         }
 
 
-        listedContent = listedContent.map(cont => {
+        listedContent = listedContent.map((cont,i) => {
             return(
                 <div className="backLeft2"> 
                     {cont}    
-                    <div className="backLeft2__parallax"></div> 
+                    <div className={`backLeft2__parallax backLeft2__parallax--${i}`}></div> 
                 </div>)
         });
 

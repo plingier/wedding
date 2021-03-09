@@ -55,12 +55,35 @@
     &__parallax {
         display: none;
 
+        &--0 {
+            /* The image used */
+            background-image: url('../images/front2.png');
+        }
+
+        &--1 {
+            /* The image used */
+            background-image: url('../images/front3.png');
+        }
+
+        &--2 {
+            /* The image used */
+            background-image: url('../images/auto3.png');
+        }
+
+        &--3 {
+            /* The image used */
+            background-image: url('../images/auto4.png');
+        }
+
+        &--4 {
+            /* The image used */
+            background-image: url('../images/auto2.png');
+        }
+
         @include respond(tab-port) {
             display: block;
-            /* The image used */
-            background-image: url('../images/test.jpg');
 
-            height: 30vh; 
+            height: 50vh; 
             width: 100%;
 
             /* Create the parallax scrolling effect */
@@ -68,6 +91,17 @@
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
+
+            @supports (-webkit-touch-callout: none) {
+                /* CSS specific to iOS devices */
+                background-attachment: initial; 
+              }
+
+            &--4 {
+                /* The image used */
+                background-attachment: initial;
+                background-position: top right;
+            }
         }
     }
 
@@ -80,13 +114,31 @@
         //width: 40rem;
         text-align: center;
         padding: 1.5rem;
+        //min-height: 50vh;
     }
 
     &__title {
-        margin-bottom: 1rem;
+        display: none;
+
+        @include respond(tab-port) {
+            display: block;
+            margin-bottom: 1rem;
+            //font-family: 'Ruthie', cursive;
+            font-family: 'Clicker Script', cursive;
+            font-size: 3.5rem;
+            font-weight: initial;
+
+            &:first-child {
+                margin-top: 2rem;
+            }
+        }
     }
 
     &__subTitle {
+        margin-bottom: 1rem;
+    }
+
+    &__date {
         margin-bottom: 1rem;
         text-transform: uppercase;
         font-weight: normal;
@@ -101,14 +153,19 @@
         display: inline-block;
         padding: 0.5rem;
         margin-top: 1rem;
+        margin-bottom: 2rem;
         text-decoration: none;
+        
+        &:active {
+            transform: translateY(2px);
+        }
     }
 }
 
 
 .venue {
     text-align: center;
-    padding: 2rem;
+    //padding: 2rem;
 
     &__blocks {
         display: inline-block;
@@ -135,7 +192,8 @@
 }
 
 .googleRSVP {
-    padding: 2rem 0rem;
+    padding: 0rem 0rem;
+    margin-bottom: 1rem;
     width: 600px; 
     height: 480px;
 

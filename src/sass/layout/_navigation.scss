@@ -135,7 +135,7 @@
         right: 2rem;
         border-radius: 50%;
         z-index: 2000;
-        box-shadow: 0 1rem 3rem rgba($color-black, .1);
+        //box-shadow: 0 1rem 3rem rgba($color-black, .1);
         text-align: center;
         cursor: pointer;
     }
@@ -160,8 +160,8 @@
         z-index: 1500;    
         opacity: 0;
         width: 0;
-        transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
         display: flex;
+        //transition: all 5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
         justify-content: center;
         align-items: center;
         padding: 0rem 0rem;
@@ -176,7 +176,13 @@
     &__list {
         list-style: none;
         color: black;
-        overflow: scroll;
+        transition:2s;
+        //overflow: scroll;
+
+        @include respond(tab-port) {
+            background-color: $color-primary-light;
+           // background-image: radial-gradient($color-primary-light, $color-primary-dark);
+        }
     }
 
     &__hyper {
@@ -216,9 +222,7 @@
         height: 4.5rem;
 
 
-        @include respond(tab-port) {
-            font-size: 1rem;
-        }
+
 
         &__icon {
             display: inline-block;
@@ -226,14 +230,7 @@
             width: 3rem;
             height: 3rem;
             border-radius: 50%;
-            padding: .55rem .55rem;
-
-            @include respond(tab-port) {
-                width: 2rem;
-                height: 2rem;
-                border-radius: 50%;
-                padding: 0.5rem 0.5rem;
-            }
+            padding: 0.4rem 0.2rem .2rem 0.75rem;
 
         }
 

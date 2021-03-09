@@ -3,6 +3,7 @@
   &__content {
     width: 80%;
     box-shadow: 0 3rem 6rem rgba($color-black, .1);
+    padding: 2rem;
   }
 
   &__cta {
@@ -12,6 +13,10 @@
     padding: 0.5rem 2rem;
     font-size: 1.5rem;
     border-radius: 20px;
+    border: 2px solid grey;
+    outline: none;
+    color: rgb(109, 126, 114);
+    background-color: white;
   }
 }
 
@@ -20,6 +25,7 @@
 .Countdown{
     margin: 10px auto;
     padding-bottom: 20px;
+    text-align: center;
   }
   
   .Countdown-col{
@@ -28,7 +34,7 @@
   
   .Countdown-col-element{
     display: inline-block;
-    margin: 0 10px;
+    margin: 0 9px;
     display: flex;
     flex-direction: column;
   }

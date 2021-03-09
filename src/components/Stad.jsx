@@ -3,8 +3,9 @@ import React from 'react';
 const Stad = (props) => {
     return (
         <div className="stad__container" id={props.title}>
-            <h2 className="stad__title">Burgerlijk huwelijk</h2>
-            <h3 className="stad__subTitle">
+            <h2 className="stad__title">Burgerlijke trouw</h2>
+            <h2 className="stad__subTitle">I do! ... Do you?</h2>
+            <h3 className="stad__date">
                 Vrijdag 23 Oktober 2020
                 <br></br>
                 <strong>9u45</strong>
@@ -12,12 +13,14 @@ const Stad = (props) => {
             <p className="stad__address">
                 <em>Stadhuis Gent</em>
                 <br></br>
-                Stadhuisstraat 123
+                Botermarkt 1
                 <br></br>
                 9000 Gent
             </p>
             <a className="stad__link" 
-                href="https://www.google.com/maps/dir/Parking+Sint-Pietersplein+(P10),+Sint-Pietersplein,+Gent/Onze-Lieve-Vrouw+Sint-Pieterskerk,+Sint-Pietersplein,+Gent/@51.0420331,3.7266986,17z/data=!4m8!4m7!1m2!1m1!1s0x47c371575524e343:0x952be0a3326e6942!1m2!1m1!1s0x47c37150a5ee13b3:0x3f63a9657888f6ba!3e2">
+                target= "_blank"
+                rel="noopener noreferrer"
+                href="https://www.google.com/maps/dir/Parking+Sint-Michiels+(P7)/Stadhuis+Gent,+Botermarkt,+Gent/@51.0562765,3.7204698,16z/data=!4m14!4m13!1m5!1m1!1s0x47c371416ebd5a63:0x5bfa68b023a0da43!2m2!1d3.7195799!2d51.0529697!1m5!1m1!1s0x47c371464ea5eafb:0x1ef8658035adcc4f!2m2!1d3.7252713!2d51.0544739!3e2">
                     Navigeer
             </a>
         </div>

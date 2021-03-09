@@ -21,7 +21,9 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "watch:sass": "node-sass src/sass/main.scss src/css/style.css -w"
+    "watch:sass": "node-sass src/sass/main.scss src/css/style.comp.css -w",
+    "prefix:css": "postcss --use autoprefixer -b \"last 10 versions\" src/css/style.comp.css -o src/css/style.prefix.css",
+    "compress:css": "node-sass src/css/style.prefix.css src/css/style.css --output-style compressed"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -38,5 +40,10 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "autoprefixer": "^7.1.4",
+    "concat": "^1.0.3",
+    "node-sass": "^4.5.3",
+    "postcss-cli": "^4.1.1"
+  }
 }

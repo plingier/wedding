@@ -13,12 +13,12 @@ const cardContent = [
     {
         id: 2,
         leftContent: "venue",
-        title: "Venue"
+        title: "Avondfeest"
     },
     {
         id: 3,
         leftContent: "party",
-        title: "Party"
+        title: "Muziekdoos"
     },
     {
         id: 4,

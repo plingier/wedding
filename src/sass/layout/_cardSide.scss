@@ -22,7 +22,7 @@
             backface-visibility: visible;
         }
 
-        transition: all .8s ease;
+        transition: all 2s ease;
         position: absolute;
         top: 0;
         left: 0;
@@ -34,21 +34,25 @@
         box-shadow: 0.1rem 1.5rem 4rem rgba($color-black, .25);
 
         &--front {
-            background-image: 
+            background:
                 linear-gradient(
                 to right bottom,
-                rgba($color-primary-light, 0.8),
-                rgba($color-primary-dark, 0.8)),
-                image-set( "../images/hero-small.jpg" 1x,
-                "../images/test.jpg" 2x);
-            background-size: cover;
-            background-position: center;
-
+                rgba($color-primary-light, 0.65),
+                rgba($color-primary-dark, 0.65)),
+                image-set( "../images/auto.png" 1x,
+                "../images/auto.png" 2x) no-repeat center;
+            background:
+                -moz-linear-gradient(
+                to right bottom,
+                rgba($color-primary-light, 0.65),
+                rgba($color-primary-dark, 0.65)),
+                url( "../images/auto.png") no-repeat center;
             background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
+            @supports (-webkit-touch-callout: none) {
+                /* CSS specific to iOS devices */
+                background-attachment: initial; 
+              }
             background-size: cover;
-
             z-index: 0;
             height: 100%;
             color:white;
@@ -82,9 +86,8 @@
 
         &--back::after {
             content: "";
-            background-image: image-set( 
-                "../images/hero-small.jpg" 1x,
-                "../images/test.jpg" 2x);
+            background: url( "../images/auto.png") no-repeat center;
+            background-attachment: fixed;
             background-size: cover;
             opacity: 0.1;
             top: 0;
