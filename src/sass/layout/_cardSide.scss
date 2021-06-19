@@ -34,13 +34,13 @@
         box-shadow: 0.1rem 1.5rem 4rem rgba($color-black, .25);
 
         &--front {
+
             background:
                 linear-gradient(
                 to right bottom,
                 rgba($color-primary-light, 0.65),
                 rgba($color-primary-dark, 0.65)),
-                image-set( "../images/auto.png" 1x,
-                "../images/auto.png" 2x) no-repeat center;
+                url( "../images/auto.png") no-repeat center;
             background:
                 -moz-linear-gradient(
                 to right bottom,
@@ -80,6 +80,7 @@
             transform: rotateY(180deg);
             display: grid;
             grid-template-columns: 2fr 1fr;
+            grid-template-rows: 1fr;
             grid-gap: 0.5rem;
         }
 

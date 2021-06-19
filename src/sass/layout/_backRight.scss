@@ -4,15 +4,38 @@
         display: none;
     }
 
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+
     box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
     display: grid;
     grid-template-rows: 1fr 0.5fr 3fr;
+
 }
 
+
+@supports (grid-gap: 0.5rem) {
+    .backRight {
+        grid-column: 2 / 3;
+    }
+}
 
 
 .postStampContainer {
     display: flex;
     justify-content: flex-end;
+
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+}
+
+.postStamp {
+    margin-left: auto;
+}
+
+@supports (justify-content: flex-end) {
+    .postStamp {
+        margin-left: initial;
+    }
 }
 
