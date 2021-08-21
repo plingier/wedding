@@ -23,7 +23,7 @@ const Venue = (props) => {
                         <div className="venue__blocks">
                             Dessert
                             <br></br>
-                            21u00
+                            21u30
                         </div>
                     </strong>
                 </h3>

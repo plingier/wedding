@@ -14,7 +14,7 @@ const RSVP = (props) => {
                 <h2 className="stad__title">RSVP</h2>
                 <h2 className="stad__subTitle">Are you in?</h2>
                 <p>Wij kijken er alvast naar uit om deze dag met jullie te beleven!</p>
-                <p>Klik binnenkort op volgende link om jullie aanwezigheid te bevestigen.</p>
+                <p>Klik op volgende link om jullie aanwezigheid te bevestigen.</p>
                 <a className="stad__link"
                     target= "_blank"
                     rel="noopener noreferrer"
@@ -32,7 +32,7 @@ const RSVP = (props) => {
                     <h2 className="stad__title">RSVP</h2>
                     <h2 className="stad__subTitle">Are you in?</h2>
                     <p>Wij kijken er alvast naar uit om deze dag met jullie te beleven!</p>
-                    <p>Klik binnenkort op volgende link om jullie aanwezigheid te bevestigen.</p>
+                    <p>Klik op volgende link om jullie aanwezigheid te bevestigen.</p>
                     <a className="stad__link" 
                         target= "_blank"
                         rel="noopener noreferrer"
