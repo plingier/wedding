@@ -12,7 +12,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-icons": "^3.10.0",
-    "react-scripts": "3.4.1"
+    "react-scripts": "5.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -41,7 +41,7 @@
     "autoprefixer": "^10.2.5",
     "concat": "^1.0.3",
     "cross-env": "^7.0.3",
-    "node-sass": "^4.5.3",
+    "node-sass": "^4.14.1",
     "postcss-cli": "^4.1.1"
   }
 }
